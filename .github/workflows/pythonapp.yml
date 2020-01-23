@@ -20,6 +20,9 @@ jobs:
            import yaml ; \
            input_yaml = open("inputs.yaml", 'r') ; \
            inputs = input_yaml.read() ; \
+           print("dds================"); \
+           print("***********"+str(inputs)); \
            inputs = yaml.safe_load(inputs) ; \
+           print(inputs) ; \
            env = Environment(scheme='https', host=inputs['host'], user=inputs['user'], token=inputs['token'], port=32222); \
            launch_training_job(inputs['jobname'], autogenerate=True, environ=env.external,workspace=inputs['workspace'], script=inputs['script'],datasets=inputs['datasets'],models=inputs['models'], template=inputs['template'])"           
