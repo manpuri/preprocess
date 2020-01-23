@@ -15,6 +15,8 @@ datasets:
     mountpath: /opt/dkube/inputs/train/images
   - name: images-test
     mountpath: /opt/dkube/inputs/test/images
+  - name: images-val
+    mountpath: /opt/dkube/inputs/val/images
   - name: rna-train
     mountpath: /opt/dkube/inputs/train/rna
   - name: rna-test
