@@ -20,8 +20,7 @@ jobs:
            import yaml ; \
            input_yaml = open("inputs.yaml", 'r') ; \
            inputs = input_yaml.read() ; \
-           print("dds================"); \
-           print("***********"+str(inputs)); \
+           print("ddsggggggggggggggggggggg"); \
            inputs = yaml.safe_load(inputs) ; \
            print(inputs) ; \
            env = Environment(scheme='https', host=inputs['host'], user=inputs['user'], token=inputs['token'], port=32222); \
