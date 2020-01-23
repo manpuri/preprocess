@@ -14,6 +14,7 @@ jobs:
            pip3 install setuptools
            pip3 install wheel          
            sudo pip3 install git+https://github.com/oneconvergence/dkube.git@1.5
+           ls
            python3 -c "import sys; \
            from dkube.sdk.dkube import *; \
            import os ;  \
