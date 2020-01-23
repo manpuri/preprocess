@@ -8,7 +8,7 @@ datasets:
   - name: clinical-train
     mountpath: /opt/dkube/inputs/train/clinical
   - name: clinical-test
-    mountpath': /opt/dkube/inputs/test/clinical
+    mountpath: /opt/dkube/inputs/test/clinical
   - name: clinical-val
     mountpath: /opt/dkube/inputs/val/clinical
   - name: images-train,
