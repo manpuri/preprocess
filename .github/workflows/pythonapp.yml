@@ -14,7 +14,6 @@ jobs:
            pip3 install setuptools
            pip3 install wheel          
            sudo pip3 install git+https://github.com/oneconvergence/dkube.git@1.5
-           ls
            python3 -c "import sys; \
            from dkube.sdk.dkube import *; \
            import os ;  \
@@ -22,6 +21,5 @@ jobs:
            input_yaml = open('inputs.yaml', 'r') ; \
            inputs = input_yaml.read() ; \
            inputs = yaml.safe_load(inputs) ; \
-           inputs = {'host': '35.247.21.0', 'user': 'oc', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVkIjoxNTc5NjExMzQzLCJyb2xlIjoib3BlcmF0b3IiLCJ1c2VybmFtZSI6Im9jIn0.KyvXEmRdnSIZxzu-0s2z_atDUpKRxyradp_bFYNdyng', 'jobname': 'test', 'workspace': 'regression', 'script': 'python train_nn.py --epochs 5', 'datasets': [{'name': 'clinical-train', 'mountpath': '/opt/dkube/inputs/train/clinical'}, {'name': 'clinical-test', "mountpath'": '/opt/dkube/inputs/test/clinical'}, {'name': 'clinical-val', 'mountpath': '/opt/dkube/inputs/val/clinical'}, {'name': 'images-train,', 'mountpath': '/opt/dkube/inputs/train/images'}, {'name': 'images-test', 'mountpath': '/opt/dkube/inputs/test/images'}, {'name': 'rna-train', 'mountpath': '/opt/dkube/inputs/train/rna'}, {'name': 'rna-test', 'mountpath': '/opt/dkube/inputs/test/rna'}, {'name': 'rna-val', 'mountpath': '/opt/dkube/inputs/val/rna'}], 'models': ['dkube-regression-model'], 'template': 'regression-training'} ; \
            env = Environment(scheme='https', host=inputs['host'], user=inputs['user'], token=inputs['token'], port=32222); \
            launch_training_job(inputs['jobname'], autogenerate=True, environ=env.external,workspace=inputs['workspace'], script=inputs['script'],datasets=inputs['datasets'],models=inputs['models'], template=inputs['template'])"           
