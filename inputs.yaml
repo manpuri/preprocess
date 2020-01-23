@@ -11,7 +11,7 @@ datasets:
     mountpath: /opt/dkube/inputs/test/clinical
   - name: clinical-val
     mountpath: /opt/dkube/inputs/val/clinical
-  - name: images-train,
+  - name: images-train
     mountpath: /opt/dkube/inputs/train/images
   - name: images-test
     mountpath: /opt/dkube/inputs/test/images
